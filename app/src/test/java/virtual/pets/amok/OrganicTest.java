@@ -14,7 +14,13 @@ class OrganicTest {
 
     @BeforeEach
     public void newPet() {
-        pet = new Organic("Rosie", "Organic cat");
+        pet = new Organic("Rosie", "Organic Cat");
+    }
+
+    @Test
+    public void shouldGetNameAndType() {
+        assertEquals("Rosie", pet.getPetName());
+        assertEquals("Organic Cat", pet.getDescription());
     }
 
     @Test
